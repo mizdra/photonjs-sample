@@ -1,0 +1,8 @@
+{
+  "name": "photonjs-sample",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "ssh://git@github.com/mizdra/photonjs-sample.git",
+  "author": "mizdra <pp.mizdra@gmail.com>",
+  "license": "MIT"
+}

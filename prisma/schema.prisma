@@ -1,0 +1,20 @@
+datasource db {
+  provider = "mysql"
+  url      = "mysql://docker:docker@localhost:3306/test_database"
+}
+
+generator photon {
+  provider = "photonjs"
+}
+
+model User {
+  id         String     @default(cuid()) @id @unique
+  name       String
+  preference Preference
+}
+
+model Preference {
+  id       String @default(cuid()) @id @unique
+  fontSize Int
+  user     User
+}

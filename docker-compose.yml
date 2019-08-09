@@ -1,0 +1,17 @@
+version: '3.7'
+
+services:
+  db:
+    image: mysql:5.7
+    container_name: photonhs-sample-db
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: 1
+      MYSQL_DATABASE: test_database
+      MYSQL_USER: docker
+      MYSQL_PASSWORD: docker
+      TZ: 'Asia/Tokyo'
+    volumes:
+      - ./db/my.cnf:/etc/mysql/conf.d/my.cnf
+      - .:/app
+    ports:
+      - 3306:3306
